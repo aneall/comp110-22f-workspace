@@ -20,17 +20,17 @@ if user_letterguess == user_wordguess[0]:
     print(user_letterguess + " found at index 0")
     user_instances = user_instances + 1
 if user_letterguess == user_wordguess[1]:
-        print(user_letterguess + " found at index 1")
-        user_instances = user_instances + 1
+    print(user_letterguess + " found at index 1")
+    user_instances = user_instances + 1
 if user_letterguess == user_wordguess[2]:
-            print(user_letterguess + " found at index 2")
-            user_instances = user_instances + 1
+    print(user_letterguess + " found at index 2")
+    user_instances = user_instances + 1
 if user_letterguess == user_wordguess[3]:
-                print(user_letterguess + " found at index 3")
-                user_instances = user_instances + 1
+    print(user_letterguess + " found at index 3")
+    user_instances = user_instances + 1
 if user_letterguess == user_wordguess[4]:
-                    print(user_letterguess + " found at index 4")
-                    user_instances = user_instances + 1
+    print(user_letterguess + " found at index 4")
+    user_instances = user_instances + 1
 
 
 if user_instances < 1:
@@ -39,4 +39,3 @@ if user_instances == 1:
     print("1 instance of " + user_letterguess + " found in " + user_wordguess)
 if user_instances > 1:
     print(str(user_instances) + " instances of " + user_letterguess + " found in " + user_wordguess)
-
