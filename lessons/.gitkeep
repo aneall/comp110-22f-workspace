@@ -1,0 +1,2 @@
+course: str = "110"
+type(int(course))
