@@ -8,14 +8,14 @@ WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
 
-user_guess: str = input(f"What is your { len(secret_word) }-letter guess? ")
+user_guess: str = input(f"What is your {len(secret_word)}-letter guess? ")
 
 guess_index: int = 0   # here we initialize the index of the user's guessed word to 0
 guess_emojibox: str = ""
 
 
 while len(user_guess) != len(secret_word):  # here we see our first loop in the program, in which the loop will continue unless the user inputs a word that is the same length as the secret.
-    new_input: str = input(f"That was not { len(secret_word) } letters! Try again: ")
+    new_input: str = input(f"That was not {len(secret_word)} letters! Try again: ")
     user_guess = new_input  # it's important that we redefine the user's guessed word to the new input, so that the computer knows whether to run the loop again.
 
 if user_guess != secret_word:  # here is where we will later begin another loop if the user's guess is not exactly the secret, based on more conditions below.
