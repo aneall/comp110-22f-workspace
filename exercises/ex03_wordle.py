@@ -40,6 +40,7 @@ def input_guess(expected_length: int) -> str:
     user_guess: str = input(f"Enter your {expected_length} character word: ")
     while len(user_guess) != expected_length:
         user_guess = input(f"That wasn't {expected_length} chars! Try again: ")
+    assert expected_length == len(user_guess)
     return user_guess
 
 
