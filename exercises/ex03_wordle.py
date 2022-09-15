@@ -2,7 +2,7 @@
 __author__ = "730604478"
 
 
-def contains_char(str_to_search: str, guess_char: str) -> bool:
+def contains_char(str_to_search: str, guess_char: str) -> bool:  # This is where we declare the function that will be used in the main function to determine if characters at certain indices in a str match that of a single character str at some point.
     """Function for finding a character within another string."""
     assert len(guess_char) == 1
     str_index: int = 0
@@ -14,7 +14,7 @@ def contains_char(str_to_search: str, guess_char: str) -> bool:
     return False
 
 
-def emojified(guess: str, secret: str) -> str:
+def emojified(guess: str, secret: str) -> str:  # This is where we declare the function that will be used in the main function to be able to keep track of codes for the different colored emoji boxes and assign them for different indices of the guessed word, depending on if they match with any characters on any indices for the secret word.
     """Function for codifying str of emoji boxes."""
     assert len(guess) == len(secret)
     WHITE_BOX: str = "\U00002B1C" 
@@ -35,7 +35,7 @@ def emojified(guess: str, secret: str) -> str:
     return codify_str
 
 
-def input_guess(expected_length: int) -> str:
+def input_guess(expected_length: int) -> str:  # This is where we declare the function that will be used in the main function to keep prompting a user for a guess, until they input a guess that is the same length as the secret word (aka proper/expected length).
     """Function for asking user for guess."""
     user_guess: str = ""
     user_guess = input(f"Enter a {expected_length} character word: ")
@@ -44,7 +44,7 @@ def input_guess(expected_length: int) -> str:
     return user_guess
 
 
-def main() -> None:
+def main() -> None:  # This is where we declare the main function, which allows us to our "building block" functions into one function that has the power to implement high-level logic of the structured wordle game!
     """The entrypoint of the program and main game loop."""
     secret_word: str = "codes"
     input_str: str = ""
@@ -66,5 +66,5 @@ def main() -> None:
         print("X/6 - Sorry, try again tomorrow!")
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # This is where we add a line of code that will make it possible for modules to import the functions created in this python program and reuse them.
     main()
