@@ -39,7 +39,8 @@ def input_guess(expected_length: int) -> str:
     user_guess: str = input(f"Enter your {expected_length} character word: ")
     guess_index: int = 0   # here we initialize the index of the user's guessed word to 0
     while len(user_guess) != expected_length:
-        user_guess = input(f"That wasn't {expected_length} chars! Try again: ")
+        new_guess: str = input(f"That wasn't {expected_length} chars! Try again: ")
+        user_guess = new_guess
     return user_guess
 
 def main() -> None:
