@@ -15,7 +15,7 @@ def contains_char(str_to_search: str, guess_char: str) -> bool:
 
 
 def emojified(guess: str, secret: str) -> str:
-    """Function for codifying str of emoji boxes"""
+    """Function for codifying str of emoji boxes."""
     assert len(guess) == len(secret)
     WHITE_BOX: str = "\U00002B1C" 
     GREEN_BOX: str = "\U0001F7E9"
@@ -36,7 +36,7 @@ def emojified(guess: str, secret: str) -> str:
 
 
 def input_guess(expected_length: int) -> str:
-    """Function for asking user for guess"""
+    """Function for asking user for guess."""
     user_guess: str = input(f"Enter your {expected_length} character word: ")
     while len(user_guess) != expected_length:
         user_guess = input(f"That wasn't {expected_length} chars! Try again: ")
@@ -50,7 +50,7 @@ def main() -> None:
     emojified_str: str = ""
     N: int = 1
     win: bool = False
-    while N < 7 and win == False:
+    while N < 7 and win is False:
         print(f"=== Turn {N}/6 ===")
         input_str = input_guess(len(secret_word))
         emojified_str = emojified(input_str, secret_word)
@@ -63,6 +63,7 @@ def main() -> None:
         print(f"You won in {N}/6 turns!")
     else:
         print("X/6 - Sorry, try again tomorrow!")
+
 
 if __name__ == "__main__":
     main()
