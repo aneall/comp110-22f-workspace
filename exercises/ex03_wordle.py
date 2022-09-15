@@ -1,6 +1,7 @@
 """My EX03, where I create a structured wordle game."""
 __author__ = "730604478"
 
+
 def contains_char(str_to_search: str, guess_char: str) -> bool:
     """Function for finding a character within another string."""
     assert len(guess_char) == 1
@@ -40,6 +41,7 @@ def input_guess(expected_length: int) -> str:
     while len(user_guess) != expected_length:
         user_guess = input(f"That wasn't {expected_length} chars! Try again: ")
     return user_guess
+
 
 def main() -> None:
     """The entrypoint of the program and main game loop."""
