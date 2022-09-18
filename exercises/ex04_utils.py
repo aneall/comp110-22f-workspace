@@ -20,16 +20,13 @@ def max(input: list[int]) -> int:
     if len(input) == 0:
         raise ValueError("max() arg is an empty list")
     i: int = 0
-    max: int = input[i]
+    max_nbr: int = input[i]
     input_length: int = len(input)
-    while i < input_length:
-        if max < input[i+1]:
-            max = input[i+1]
-            i += 1
-    return max
-        
-
-
+    while i < (input_length-1):
+        if max_nbr < input[i]:
+            max_nbr = input[i]
+        i += 1
+    return max_nbr
 
 
 def is_equal(a: list[int], b: list[int]) -> bool:
