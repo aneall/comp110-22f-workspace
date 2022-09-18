@@ -17,7 +17,8 @@ def all(a: list[int], b: int) -> bool:
 def max(input: list[int]) -> int:
     if len(input) == 0:
         raise ValueError("max() arg is an empty list")
-    return max(input)
+    else:
+        return max(input)
 
 
 def is_equal(a: list[int], b: list[int]) -> bool:
