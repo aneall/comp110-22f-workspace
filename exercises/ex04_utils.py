@@ -23,8 +23,8 @@ def max(input: list[int]) -> int:
     max_nbr: int = input[i]
     input_length: int = len(input)
     while i < (input_length-1):
-        if max_nbr < input[i]:
-            max_nbr = input[i]
+        if max_nbr < input[i+1]:
+            max_nbr = input[i+1]
         i += 1
     return max_nbr
 
