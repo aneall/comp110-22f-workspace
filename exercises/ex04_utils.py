@@ -23,9 +23,9 @@ def max(input: list[int]) -> int:  # retruns an int, indicating what the maximum
     i: int = 0
     max_nbr: int = input[i]
     input_length: int = len(input)
-    while i < (input_length-1):
-        if max_nbr < input[i+1]:
-            max_nbr = input[i+1]
+    while i < (input_length - 1):
+        if max_nbr < input[i + 1]:
+            max_nbr = input[i + 1]
         i += 1
     return max_nbr
 
