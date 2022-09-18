@@ -6,6 +6,8 @@ def all(a: list[int], b: int) -> bool:
     # return bool indicating whether or not all the ints in the list are the same as the given int.
     list_length: int = len(a)
     i: int = 0
+    if list_length == 0:
+        return False
     while i < list_length:
         if a[i] == b:
             i += 1
@@ -17,8 +19,6 @@ def all(a: list[int], b: int) -> bool:
 def max(input: list[int]) -> int:
     if len(input) == 0:
         raise ValueError("max() arg is an empty list")
-    else:
-        return max(input)
 
 
 def is_equal(a: list[int], b: list[int]) -> bool:
