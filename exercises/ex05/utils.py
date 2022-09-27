@@ -35,7 +35,7 @@ def sub(x: list[int], start: int, end: int) -> list:
     if start < 0:
         start = 0
     if end > len(x):
-        end = len(x) - 1
+        end = len(x)
     while start < end:
         new_list.append(x[start])
         start += 1
