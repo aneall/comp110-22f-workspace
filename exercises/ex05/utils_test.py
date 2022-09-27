@@ -55,7 +55,7 @@ def sub_negative_end() -> None:
 def sub_start_too_big() -> None:
     x: list[int] = [1,2,3]
     start: int = 5
-    end: int = 3
+    end: int = 4
     assert sub(x,start,end) == []
 
 def sub_first_two_indices() -> None:
