@@ -41,11 +41,3 @@ def sub(x: list[int], start: int, end: int) -> list:
         new_list.append(x[start])
         start += 1
     return new_list
-
-x: list[int] = [10,20,30,40]
-start: int = 1
-end: int = 3
-print(sub(x,start,end))
-
-
-
