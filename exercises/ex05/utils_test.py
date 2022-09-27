@@ -30,33 +30,32 @@ def test_only_evens_all_evens() -> None:
 
 
 
-
 def test_concat_one_empty_list() -> None:
     """A test for the concat function to make sure that when one list with length 3 and another empty list are used as the parameters, a list identical to the first list is returned."""
     x: list[int] = [1, 2, 3]
     y: list[int] = []
-    assert concat(x,y) == [1, 2, 3]
+    assert concat(x, y) == [1, 2, 3]
 
 
 def test_concat_use_case() -> None:
     """A test for the concat function to make sure that when one list with length 3 and another list with length 2 are used as the parameters, a list that appends the latter onto the first list is first list is correctly returned."""
     x: list[int] = [1, 2, 3]
     y: list[int] = [1, 2]
-    assert concat(x,y) == [1, 2, 3, 1, 2]
+    assert concat(x, y) == [1, 2, 3, 1, 2]
 
 
 def test_concat_another_use_case() -> None:
     """A test for the concat function to make sure that when one list with length 2 (that has the same values in both indices) and another list with length 2 are used as the parameters, a list that begins with the first list and appends the second list is returned."""
     x: list[int] = [4, 4]
     y: list[int] = [3, 4]
-    assert concat(x,y) == [4, 4, 3, 4]
+    assert concat(x, y) == [4, 4, 3, 4]
 
 
 def test_concat_two_empty_lists() -> None:
     """A test for the concat function to make sure that when two empty lists are used as the parameters, an empty list is returned."""
     x: list[int] = []
     y: list[int] = []
-    assert concat(x,y) == []
+    assert concat(x, y) == []
 
 
 
