@@ -30,8 +30,7 @@ def concat(x: list[int], y: list[int]) -> list:
 
 def sub(x: list[int], start: int, end: int) -> list:
     new_list: list = []
-    if len(x) == 0:
-        start > len(x) or end <= 0
+    if len(x) == 0 or start > len(x) or end <= 0:
         return new_list
     if start < 0:
         start = 0
