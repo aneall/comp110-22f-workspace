@@ -46,25 +46,25 @@ def test_concat_two_empty_lists() -> None:
 
 
 
-def sub_negative_end() -> None:
+def test_sub_negative_end() -> None:
     x: list[int] = [1,2,3]
     start: int = 2
     end: int = -1
     assert sub(x,start,end) == []
 
-def sub_start_too_big() -> None:
+def test_sub_start_too_big() -> None:
     x: list[int] = [1,2,3]
     start: int = 5
     end: int = 4
     assert sub(x,start,end) == []
 
-def sub_first_two_indices() -> None:
+def test_sub_first_two_indices() -> None:
     x: list[int] = [20,50,30,60]
     start: int = 0
     end: int = 2
     assert sub(x,start,end) == [20,50]
 
-def sub_another_use() -> None:
+def test_sub_another_use() -> None:
     x: list[int] = [3,18,6,3,5]
     start: int = 1
     end: int = 4
