@@ -29,7 +29,6 @@ def test_only_evens_all_evens() -> None:
     assert only_evens(x) == [2, 6, 16, 8]
 
 
-
 def test_concat_one_empty_list() -> None:
     """A test for the concat function to make sure that when one list with length 3 and another empty list are used as the parameters, a list identical to the first list is returned."""
     x: list[int] = [1, 2, 3]
@@ -56,7 +55,6 @@ def test_concat_two_empty_lists() -> None:
     x: list[int] = []
     y: list[int] = []
     assert concat(x, y) == []
-
 
 
 def test_sub_negative_end() -> None:
