@@ -37,7 +37,7 @@ def check_guess(x: int) -> int:
         # function returns 2, which specifies that the user guessed correctly.
         return 2
     else:
-        return 3 # function returns 3, which specifies that the user guessed incorrectly.
+        return 3  # function returns 3, which specifies that the user guessed incorrectly.
 
 
 def main() -> None:
