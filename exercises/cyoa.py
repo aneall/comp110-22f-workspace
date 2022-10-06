@@ -4,6 +4,8 @@ import random
 
 player: str = ""
 points: int = 0
+SMILE_FACE: str = "\U0001F604"
+SAD_FACE: str = "\U0001F622"
 
 
 def greet() -> None:
@@ -11,7 +13,7 @@ def greet() -> None:
     print("Welcome to the coinflip game.")
     global player
     player = input("What is your name? ")
-    print(f"Welcome {player}. In this game you will pick either heads or tails each round and see how many times you can consistently guess correctly. Your amount of points will increase by 1 each time you guess the coin flip correctly and you can receive bonus points with certain questions.")
+    print(f"Welcome {player}. In this game you will pick either heads or tails each round and see how many times you can consistently guess correctly. If you would like to end the game early, enter 2 for a given guess prompt. Your amount of points will increase by 1 each time you guess the coin flip correctly and you can receive bonus points with certain questions.")
 
 
 def end_game() -> None:
@@ -27,9 +29,9 @@ def bonus_round() -> None:
     if guess == random_int:
         global points
         points += 10
-        print("Congratulations, you received 10 bonus points.")
+        print(f"Congratulations, you received 10 bonus points. {SMILE_FACE} ")
     else:
-        print("You did not receive bonus points.")
+        print(f"You did not receive bonus points. {SAD_FACE} ")
 
 
 def check_guess(x: int) -> int:
@@ -49,10 +51,10 @@ def big_bonus(x: int) -> int:
     if x == 3:
         color_guess: str = input("What is my favorite color? ")
         if color_guess == "blue":
-            print(f"Wow, {player}, You are a mind reader! You just earned 20 additional points!")
+            print(f"Wow, {player}, You are a mind reader! You just earned 20 additional points! {SMILE_FACE} ")
             x += 20
         else:
-            print("Sorry, that's wrong.")
+            print(f"Sorry, that's wrong. {SAD_FACE} ")
     return x
 
 
@@ -67,12 +69,14 @@ def main() -> None:
         if points == 1:
             bonus_round()  # here we call the 10-point bonus function and will add 10 to points' value when points currently equals 1 before entering such function.
         user_guess = int(input("Enter 0 for heads, 1 for tails, or 2 to end the coin flip game. "))
+        if user_guess == 2:
+            end_game()
         heads_or_tails = check_guess(user_guess)  # on the following lines we use a variable (heads_or_tails) to keep track of if the user guessed correctly (2) or incorrectly (3) so that the correct output message can be sent and points are correctly updated.
         if heads_or_tails == 2:
             points += 1
-            print("Congratulations, you guessed correctly so you gained 1 point!")
+            print(f"Congratulations, you guessed correctly so you gained 1 point! {SMILE_FACE} ")
         if heads_or_tails == 3:
-            print("Sorry, that was incorrect.")
+            print(f"Sorry, that was incorrect. {SAD_FACE} ")
             end_game()
 
 
