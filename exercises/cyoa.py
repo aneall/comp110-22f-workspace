@@ -5,6 +5,7 @@ import random
 player: str = ""
 points: int = 0
 
+
 def greet() -> None:
     print("Welcome to the coinflip game.")
     global player
@@ -19,7 +20,7 @@ def end_game() -> None:
 
 def bonus_round() -> None:
     guess: int = input("Pick a number between 1 and 10 to earn an extra 10 points: ")
-    random_int: int = random.randint(1,10)
+    random_int: int = random.randint(1, 10)
     if guess == random_int:
         global points
         points += 10
@@ -31,7 +32,7 @@ def bonus_round() -> None:
 def check_guess(x: int) -> int:
     # takes a random number and converts such to heads or tails
     # 0 is heads and 1 is tails
-    random_int: int = random.randint(0,1)
+    random_int: int = random.randint(0, 1)
     if random_int == x:
         # function returns 2, which specifies that the user guessed correctly.
         return 2
@@ -53,7 +54,6 @@ def main() -> None:
         if heads_or_tails == 3:
             print("Sorry, that was incorrect.")
             end_game()
-
 
 
 if __name__ == "__main__":
