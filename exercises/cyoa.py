@@ -1,4 +1,5 @@
-"""My first open-ended programming assignment, in which I create a game of choice!"""
+"""My first open-ended programming assignment, in which I create a fun coinflip game!"""
+__author__ = "730604478"
 
 import random
 
