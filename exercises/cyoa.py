@@ -30,7 +30,7 @@ def bonus_round() -> None:
     if guess == random_int:
         global points
         points += 10
-        print(f"Congratulations, you received 10 bonus points. {SMILE_FACE} ")
+        print(f"Congratulations, {player} you received 10 bonus points. {SMILE_FACE} ")
     else:
         print(f"You did not receive bonus points. {SAD_FACE} ")
 
