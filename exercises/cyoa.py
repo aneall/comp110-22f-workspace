@@ -11,12 +11,12 @@ def greet() -> None:
     print("Welcome to the coinflip game.")
     global player
     player = input("What is your name? ")
-    print(f"Welcome {player}. In this game you will pick either heads or tails each round and see how many times you can consistently guess correctly. Your amount of points will increase by 1 each time you guess the coin flip correctly.")
+    print(f"Welcome {player}. In this game you will pick either heads or tails each round and see how many times you can consistently guess correctly. Your amount of points will increase by 1 each time you guess the coin flip correctly and you can receive bonus points with certain questions.")
 
 
 def end_game() -> None:
     """The end_game function allows the player to view their final score (# of rounds successfully guessed correctly) before exiting the game."""
-    print(f"Your final score for number of times guesssed correctly in a row is {points}! Goodbye, {player}. ")
+    print(f"Your final score is {points}! Goodbye, {player}. ")
     quit()
 
 
@@ -43,12 +43,27 @@ def check_guess(x: int) -> int:
         return 3  # function returns 3, which specifies that the user guessed incorrectly.
 
 
+def big_bonus(x: int) -> int:
+    if x == 1:
+        color_guess: str = input("What is my favorite color? ")
+        if color_guess == "blue":
+            print(f"Wow, {player}, You are a mind reader! You just earned 20 additional points!")
+            x += 20
+        else:
+            print("Sorry, that's wrong.")
+    return x
+
+
+
+
+
 def main() -> None:
     greet()
     global points
     user_guess: int = 0
     heads_or_tails: int = 0
     while user_guess < 2:
+        points = big_bonus(points)
         if points == 1:
             bonus_round()
         user_guess = int(input("Enter 0 for heads, 1 for tails, or 2 to end the coin flip game. "))
