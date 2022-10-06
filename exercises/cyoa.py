@@ -25,7 +25,7 @@ def end_game() -> None:
 
 def bonus_round() -> None:
     """The bonus_round function prompts the user to answer an additional guessing question to possibly receive an extra 10 points. As menioned in the main function, thsi will only happen once user's current points is at 0."""
-    guess: int = input("Pick a number between 1 and 10 to earn an extra 10 points: ")
+    guess: int = int(input("Pick a number between 1 and 10 to earn an extra 10 points: "))
     random_int: int = random.randint(1, 10)
     if guess == random_int:
         global points
