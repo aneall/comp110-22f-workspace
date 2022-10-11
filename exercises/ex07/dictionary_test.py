@@ -9,7 +9,7 @@ import pytest
 def test_invert_all_same() -> None:
     """A test to see if an error results when all pairs are the same."""
     with pytest.raises(KeyError):
-        my_dictionary = {"a": "hello", "a": "hello", "a": "hello"}
+        my_dictionary = {"a": "hello", "b": "hello", "c": "hello"}
         invert(my_dictionary)
 
 def test_invert_three_elements() -> None:
@@ -36,12 +36,12 @@ def test_three_favorite_colors() -> None:
 
 def test_count_three_elements() -> None:
     """A test to see if when three str,one of which is mentioned twice, are in the argument, both are correctly counted for instances they are mentioned and returned as a dictionary."""
-    assert count(list("a", "b", "a")) == {"a": 2, "b": 1}
+    assert count(["a", "b", "a"]) == {"a": 2, "b": 1}
     
 def test_count_empty_list() -> None:
     """A test to see if when an empty list is the argument, an empty dictionary is returned."""
-    assert count(list()) == {}
+    assert count([]) == {}
     
 def test_count_three_same() -> None:
     """A test to see if when three of the same str are given as the argument, a dictionary counting the str designates the value as 3 to signify that is was mentioned three times."""
-    assert count(list("b", "b", "b")) == {"b": 3}
+    assert count(["b", "b", "b"]) == {"b": 3}

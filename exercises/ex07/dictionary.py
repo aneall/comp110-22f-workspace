@@ -41,4 +41,4 @@ def count(a: list[str]) -> dict[str, int]:
             result[item] += 1
         else:
             result[item] = 1
-        return result 
+    return result 
