@@ -35,7 +35,7 @@ def favorite_color(a: dict[str, str]) -> str:
 
 def count(a: list[str]) -> dict[str, int]:
     """A function to count the number of instances a certain str is given in a list, and return the matching pairs of str (key) and instances (value) as a dictionary."""
-    result: dict[str, int]
+    result: dict[str, int] = {}
     for item in a:
         if item in result:
             result[item] += 1
