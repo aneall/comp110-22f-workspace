@@ -1,6 +1,7 @@
 """An exercise for dictionaries where I implement function skeletons."""
 __author__ = "730604478"
 
+
 def invert(a: dict[str, str]) -> dict[str, str]:
     """A function to invert the keys and values of a given dictionary."""
     inverted: dict[str, str] = {}
