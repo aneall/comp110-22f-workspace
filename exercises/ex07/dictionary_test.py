@@ -46,8 +46,8 @@ def test_count_three_elements() -> None:
 def test_count_empty_list() -> None:
     """A test to see if when an empty list is the argument, an empty dictionary is returned."""
     assert count([]) == {}
-  
-    
+
+
 def test_count_three_same() -> None:
     """A test to see if when three of the same str are given as the argument, a dictionary counting the str designates the value as 3 to signify that is was mentioned three times."""
     assert count(["b", "b", "b"]) == {"b": 3}
